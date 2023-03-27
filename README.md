@@ -1,4 +1,4 @@
-# Caprover Simple PHP Deploy
+# Caprover Cli Simple PHP Deploy
 
 ### Instructions to deploy this simple application at localhost:
 
