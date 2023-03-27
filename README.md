@@ -4,6 +4,11 @@
 It's not an official documentation
 
 ----------
+install:
+
+`npm install -g caprover`
+
+----------
 `caprover serversetup`
 ```
 ? have you already started CapRover container on your server? Yes
@@ -12,7 +17,6 @@ It's not an official documentation
 ? CapRover server root domain:
 ```
 ----------
-`npm install -g caprover`
 `caprover login`
 ```
 Login to a CapRover machine...
@@ -25,9 +29,10 @@ Login to a CapRover machine...
 
 Create an app:
 
-```
+`
 caprover api -n captain-01 -m POST  -t /user/apps/appDefinitions/register -d {\"appName\":\"aaa\"}
-```
+`
+
 -----------
 `caprover deploy`
 
