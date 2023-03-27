@@ -48,6 +48,39 @@ Ensuring authentication...
 ? git branch name to be deployed: main
 ? note that uncommitted and gitignored files (if any) will not be pushed to server! Are you sure you want to deploy? Yes
 ```
+-------------
+Expected response:
+
+```
+Deploying aaa to captain-01...
+
+Uploading [====================] 100%  (ETA 0.0s)
+Upload done.
+
+This might take several minutes. PLEASE BE PATIENT...
+
+Building your source code...
+
+------------------------- Mon Mar 27 2023 20:39:32 GMT+0000 (Coordinated Universal Time)
+Build started for aaa
+Ignore warnings for unconsumed build-args if there is any
+Step 1/2 : FROM library/php:7.2-apache
+
+---> c61d277263e1
+Step 2/2 : COPY ./ /var/www/html/
+
+---> Using cache
+---> 99f36d84f7ca
+[Warning] One or more build-args [CAPROVER_GIT_COMMIT_SHA] were not consumed
+Successfully built 99f36d84f7ca
+Successfully tagged img-captain-aaa:latest
+Build has finished successfully!
+
+Deployed successfully aaa
+App is available at http://aaa.captain.localhost
+```
+
+
 ----------
 Some useful links:
 - https://github.com/caprover/caprover-cli
