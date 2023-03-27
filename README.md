@@ -1,7 +1,9 @@
-# Caprover Cli Simple PHP Deploy
+# Caprover Cli Simple Deploy
 
-### Instructions to deploy this simple application at localhost:
+### Instructions to deploy this simple caprover application with cli at localhost
+It's not an official documentation
 
+----------
 `caprover serversetup`
 ```
 ? have you already started CapRover container on your server? Yes
@@ -9,7 +11,8 @@
 ? current CapRover password: [hidden]
 ? CapRover server root domain:
 ```
-
+----------
+`npm install -g caprover`
 `caprover login`
 ```
 Login to a CapRover machine...
@@ -18,12 +21,17 @@ Login to a CapRover machine...
 ? CapRover machine password: [hidden]
 ? CapRover machine name, with whom the login credentials are stored locally: captain-01
 ```
+-----------
 
-- Create an empty app in Caprover GUI
+Create an app:
 
-`caprover deploy`
 ```
+caprover api -n captain-01 -m POST  -t /user/apps/appDefinitions/register -d {\"appName\":\"aaa\"}
+```
+-----------
+`caprover deploy`
 
+```
 Preparing deployment to CapRover...
 
 **** Protip ****
@@ -35,7 +43,9 @@ Ensuring authentication...
 ? git branch name to be deployed: main
 ? note that uncommitted and gitignored files (if any) will not be pushed to server! Are you sure you want to deploy? Yes
 ```
-
+----------
 Some useful links:
-https://github.com/caprover/caprover-cli
-https://caprover.com/docs/captain-definition-file.html
+- https://github.com/caprover/caprover-cli
+- https://caprover.com/docs/captain-definition-file.html
+
+
