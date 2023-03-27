@@ -33,6 +33,8 @@ Create an app:
 caprover api -n captain-01 -m POST  -t /user/apps/appDefinitions/register -d {\"appName\":\"aaa\"}
 `
 
+When use the api, don't forgot to remove /api/v2 from path
+
 -----------
 `caprover deploy`
 
